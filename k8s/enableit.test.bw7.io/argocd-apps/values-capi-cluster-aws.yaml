@@ -27,7 +27,7 @@ aws:
   pods:
     cidrBlock: 192.168.0.0/16
   controlPlane:
-    loadBalancerType: network
+    loadBalancerType: nlb
     region: eu-west-1
     replicas: 3
     instanceType: t4g.medium
