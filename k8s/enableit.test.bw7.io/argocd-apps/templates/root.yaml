@@ -2,17 +2,17 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: root
-  namespace: argo-cd
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: argo-cd
+    namespace: argocd
   project: default
   source:
-    path: k8s/test.cluster.com/argocd-apps
-    repoURL: https://github.com/Archisman-Mridha/kubeaid-config.git
+    path: k8s/enableit.test.bw7.io/argocd-apps/templates
+    repoURL: https://github.com/Ahmad-Faizan/kubeaid-config.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:

@@ -1,6 +1,6 @@
 global:
-  clusterName: test.cluster.com
-  customerid: kubeaid-demo
+  clusterName: enableit.test.bw7.io
+  customerid: faizan
   kubernetes:
     version: v1.29.0
   clusterAPI:
@@ -11,7 +11,7 @@ global:
   kubeaid:
     repo: https://github.com/Archisman-Mridha/kubeaid.git
   kubeaidConfig:
-    repo: https://github.com/Archisman-Mridha/kubeaid-config.git
+    repo: https://github.com/Ahmad-Faizan/kubeaid-config.git
 
 provider:
   aws: true
@@ -19,23 +19,23 @@ provider:
 aws:
   secretName: capi-cluster-token
   sshKeyName: kubeaid-demo
-  region: us-east-2
+  region: eu-west-1
   bastion:
     enabled: true
   vpc:
-    cidrBlock: 10.14.0.0/22
+    cidrBlock: 10.12.0.0/16
   pods:
-    cidrBlock: 10.244.0.0/16
+    cidrBlock: 192.168.0.0/16
   controlPlane:
-    loadBalancerType: classic
-    region: us-east-2
-    replicas: 1
+    loadBalancerType: network
+    region: eu-west-1
+    replicas: 3
     instanceType: t4g.medium
     ami:
-      id: ami-0f7448e8ce7fe91fa
+      id: ami-03cd26c84ae9a587c
   workerNodes:
-    region: us-east-2
+    region: eu-west-1
     replicas: 2
     instanceType: t4g.medium
     ami:
-      id: ami-0f7448e8ce7fe91fa
+      id: ami-03cd26c84ae9a587c
