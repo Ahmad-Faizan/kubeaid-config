@@ -30,12 +30,12 @@ aws:
     loadBalancerType: nlb
     region: eu-west-1
     replicas: 3
-    instanceType: t4g.medium
+    instanceType: t3a.large
     ami:
       id: ami-03cd26c84ae9a587c
   workerNodes:
     region: eu-west-1
     replicas: 2
-    instanceType: t4g.medium
+    instanceType: t3a.large
     ami:
       id: ami-03cd26c84ae9a587c
