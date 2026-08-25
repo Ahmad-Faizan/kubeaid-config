@@ -7,7 +7,7 @@ cloudProvider:
   none: {}
 
 versions:
-  kubernetes: v1.34.10
+  kubernetes: v1.35.8
 
 apiEndpoint:
   host: 192.168.122.41
