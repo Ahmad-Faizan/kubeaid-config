@@ -41,7 +41,7 @@ dynamicWorkers: []
 helmReleases:
   - repoURL: https://helm.cilium.io/
     chart: cilium
-    version: 1.19.5
+    version: 1.20.1
     releaseName: cilium
     namespace: cilium
     wait: true
