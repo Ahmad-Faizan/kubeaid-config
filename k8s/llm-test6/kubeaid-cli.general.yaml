@@ -27,6 +27,8 @@ cloud:
   bare-metal:
     ssh:
       port: 22
+    kubelet:
+      maxPods: 300
     controlPlane:
       endpoint:
         host: 192.168.122.144
