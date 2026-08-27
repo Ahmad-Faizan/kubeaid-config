@@ -13,7 +13,7 @@ forkURLs:
 cluster:
   type: workload
   name: llm-test5
-  k8sVersion: v1.34.0
+  k8sVersion: v1.35.8
   enableAuditLogging: false
   apiServer:
     extraArgs: {}
