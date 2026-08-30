@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   labels:
-    kubeaid.io/version: 32.6.2
+    kubeaid.io/version: 32.4.0
     kubeaid.io/managed-by: kubeaid
     kubeaid.io/sync-order: "10"
   name: localpv-provisioner
@@ -17,7 +17,7 @@ spec:
   sources:
     - repoURL: https://github.com/Obmondo/KubeAid.git
       path: argocd-helm-charts/localpv-provisioner
-      targetRevision: 32.6.2
+      targetRevision: 32.4.0
       helm:
         valueFiles:
           - $values/k8s/llm-test6/argocd-apps/values-localpv-provisioner.yaml

@@ -7,14 +7,11 @@ cloudProvider:
   none: {}
 
 versions:
-  kubernetes: v1.35.8
+  kubernetes: v1.34.0
 
 apiEndpoint:
   host: 192.168.122.144
   port: 6443
-
-kubeletConfig:
-  maxPods: 300
 
 controlPlane:
   hosts:
@@ -25,7 +22,6 @@ controlPlane:
 clusterNetwork:
   podSubnet: "10.244.0.0/16"
   serviceSubnet: "10.96.0.0/12"
-  nodeCIDRMaskSizeIPv4: 23
   cni:
     external: {}
   kubeProxy:
@@ -45,7 +41,7 @@ dynamicWorkers: []
 helmReleases:
   - repoURL: https://helm.cilium.io/
     chart: cilium
-    version: 1.20.1
+    version: 1.19.5
     releaseName: cilium
     namespace: cilium
     wait: true
