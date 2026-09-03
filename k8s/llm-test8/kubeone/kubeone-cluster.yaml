@@ -13,9 +13,6 @@ apiEndpoint:
   host: 192.168.122.17
   port: 6443
 
-kubeletConfig:
-  maxPods: 300
-
 controlPlane:
   hosts:
     -
@@ -25,7 +22,6 @@ controlPlane:
 clusterNetwork:
   podSubnet: "10.244.0.0/16"
   serviceSubnet: "10.96.0.0/12"
-  nodeCIDRMaskSizeIPv4: 23
   cni:
     external: {}
   kubeProxy:
