@@ -16,7 +16,7 @@ spec:
   project: kubeaid
   source:
     path: k8s/llm-test8/kube-prometheus
-    repoURL: git@github.com:Ahmad-Faizan/kubeaid-config.git
+    repoURL: https://github.com/Ahmad-Faizan/kubeaid-config.git
     targetRevision: HEAD
     directory:
       recurse: true
