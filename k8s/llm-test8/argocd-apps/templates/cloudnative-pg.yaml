@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    kubeaid.io/version: 32.4.0
+    kubeaid.io/managed-by: kubeaid
+    kubeaid.io/sync-order: "10"
+    kubeaid.io/priority: default
+  name: cloudnative-pg
+  namespace: argocd
+spec:
+  destination:
+    namespace: cloudnative-pg
+    server: https://kubernetes.default.svc
+  project: kubeaid
+  sources:
+    - repoURL: https://github.com/Obmondo/KubeAid.git
+      path: argocd-helm-charts/cloudnative-pg
+      targetRevision: 32.4.0
+    - repoURL: https://github.com/Ahmad-Faizan/kubeaid-config.git
+      targetRevision: HEAD
+      ref: values
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
+      - ServerSideApply=true
