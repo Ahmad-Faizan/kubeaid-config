@@ -19,10 +19,6 @@ cluster:
     extraArgs: {}
     extraVolumes: []
     files: []
-  argoCD:
-    deployKeys:
-      kubeaidConfig:
-        privateKeyFilePath: /home/faizan/.ssh/id_rsa
 
 kubePrometheus:
   version: v0.18.0
